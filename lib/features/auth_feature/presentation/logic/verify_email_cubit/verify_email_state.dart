@@ -6,4 +6,5 @@ class VerifyEmailState with _$VerifyEmailState {
   const factory VerifyEmailState.loding() = _Loding;
   const factory VerifyEmailState.success() = _Success;
   const factory VerifyEmailState.error(AuthFailures failure) = _Error;
+  const factory VerifyEmailState.signOutSuccess() = _SignOutSuccess;
 }

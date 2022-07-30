@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -43,6 +45,7 @@ class VerifyEmailPage extends StatelessWidget {
               ),
             ),
           ),
+           signOutSuccess: () => Phoenix.rebirth(context),
         );
       },
       builder: (context, state) {
@@ -51,6 +54,13 @@ class VerifyEmailPage extends StatelessWidget {
             Scaffold(
               appBar: AppBar(
                 title: Text(appLan.verify_email),
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        BlocProvider.of<VerifyEmailCubit>(context).signOut();
+                      },
+                      icon: const Icon(Icons.logout))
+                ],
               ),
               body: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),

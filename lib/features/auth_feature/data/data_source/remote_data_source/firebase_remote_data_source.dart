@@ -17,6 +17,8 @@ abstract class FirebaseAuthRemoteDataSource {
   Future<Either<AuthExceptions, Unit>> registerWithGoogle();
   Future<Either<AuthExceptions, Unit>> resetPassword(String email);
   Future<Either<AuthExceptions, Unit>> sendEmailVerification();
+
+  Future<Either<AuthExceptions, Unit>> signOut();
 }
 
 @LazySingleton(as: FirebaseAuthRemoteDataSource)
@@ -120,6 +122,16 @@ class FirebaseAuthRemoteDataSourceImpl implements FirebaseAuthRemoteDataSource {
     try {
       final currentUser = _firebaseAuth.currentUser;
       await currentUser!.sendEmailVerification();
+      return const Right(unit);
+    } catch (e) {
+      return const Left(AuthExceptions.serverException());
+    }
+  }
+
+  @override
+  Future<Either<AuthExceptions, Unit>> signOut() async {
+    try {
+      await _firebaseAuth.signOut();
       return const Right(unit);
     } catch (e) {
       return const Left(AuthExceptions.serverException());

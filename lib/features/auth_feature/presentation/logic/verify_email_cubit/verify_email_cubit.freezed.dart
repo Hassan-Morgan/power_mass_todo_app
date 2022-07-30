@@ -22,6 +22,7 @@ mixin _$VerifyEmailState {
     required TResult Function() loding,
     required TResult Function() success,
     required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$VerifyEmailState {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$VerifyEmailState {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$VerifyEmailState {
     required TResult Function(_Loding value) loding,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$VerifyEmailState {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$VerifyEmailState {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -129,6 +135,7 @@ class _$_Initial implements _Initial {
     required TResult Function() loding,
     required TResult Function() success,
     required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
   }) {
     return initial();
   }
@@ -140,6 +147,7 @@ class _$_Initial implements _Initial {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
   }) {
     return initial?.call();
   }
@@ -151,6 +159,7 @@ class _$_Initial implements _Initial {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -166,6 +175,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Loding value) loding,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
   }) {
     return initial(this);
   }
@@ -177,6 +187,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
   }) {
     return initial?.call(this);
   }
@@ -188,6 +199,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -243,6 +255,7 @@ class _$_Loding implements _Loding {
     required TResult Function() loding,
     required TResult Function() success,
     required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
   }) {
     return loding();
   }
@@ -254,6 +267,7 @@ class _$_Loding implements _Loding {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
   }) {
     return loding?.call();
   }
@@ -265,6 +279,7 @@ class _$_Loding implements _Loding {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
     required TResult orElse(),
   }) {
     if (loding != null) {
@@ -280,6 +295,7 @@ class _$_Loding implements _Loding {
     required TResult Function(_Loding value) loding,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
   }) {
     return loding(this);
   }
@@ -291,6 +307,7 @@ class _$_Loding implements _Loding {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
   }) {
     return loding?.call(this);
   }
@@ -302,6 +319,7 @@ class _$_Loding implements _Loding {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
     required TResult orElse(),
   }) {
     if (loding != null) {
@@ -359,6 +377,7 @@ class _$_Success implements _Success {
     required TResult Function() loding,
     required TResult Function() success,
     required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
   }) {
     return success();
   }
@@ -370,6 +389,7 @@ class _$_Success implements _Success {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
   }) {
     return success?.call();
   }
@@ -381,6 +401,7 @@ class _$_Success implements _Success {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -396,6 +417,7 @@ class _$_Success implements _Success {
     required TResult Function(_Loding value) loding,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
   }) {
     return success(this);
   }
@@ -407,6 +429,7 @@ class _$_Success implements _Success {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
   }) {
     return success?.call(this);
   }
@@ -418,6 +441,7 @@ class _$_Success implements _Success {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -506,6 +530,7 @@ class _$_Error implements _Error {
     required TResult Function() loding,
     required TResult Function() success,
     required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
   }) {
     return error(failure);
   }
@@ -517,6 +542,7 @@ class _$_Error implements _Error {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
   }) {
     return error?.call(failure);
   }
@@ -528,6 +554,7 @@ class _$_Error implements _Error {
     TResult Function()? loding,
     TResult Function()? success,
     TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -543,6 +570,7 @@ class _$_Error implements _Error {
     required TResult Function(_Loding value) loding,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
   }) {
     return error(this);
   }
@@ -554,6 +582,7 @@ class _$_Error implements _Error {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
   }) {
     return error?.call(this);
   }
@@ -565,6 +594,7 @@ class _$_Error implements _Error {
     TResult Function(_Loding value)? loding,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -581,4 +611,127 @@ abstract class _Error implements VerifyEmailState {
   @JsonKey(ignore: true)
   _$$_ErrorCopyWith<_$_Error> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_SignOutSuccessCopyWith<$Res> {
+  factory _$$_SignOutSuccessCopyWith(
+          _$_SignOutSuccess value, $Res Function(_$_SignOutSuccess) then) =
+      __$$_SignOutSuccessCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_SignOutSuccessCopyWithImpl<$Res>
+    extends _$VerifyEmailStateCopyWithImpl<$Res>
+    implements _$$_SignOutSuccessCopyWith<$Res> {
+  __$$_SignOutSuccessCopyWithImpl(
+      _$_SignOutSuccess _value, $Res Function(_$_SignOutSuccess) _then)
+      : super(_value, (v) => _then(v as _$_SignOutSuccess));
+
+  @override
+  _$_SignOutSuccess get _value => super._value as _$_SignOutSuccess;
+}
+
+/// @nodoc
+
+class _$_SignOutSuccess implements _SignOutSuccess {
+  const _$_SignOutSuccess();
+
+  @override
+  String toString() {
+    return 'VerifyEmailState.signOutSuccess()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_SignOutSuccess);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loding,
+    required TResult Function() success,
+    required TResult Function(AuthFailures failure) error,
+    required TResult Function() signOutSuccess,
+  }) {
+    return signOutSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loding,
+    TResult Function()? success,
+    TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
+  }) {
+    return signOutSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loding,
+    TResult Function()? success,
+    TResult Function(AuthFailures failure)? error,
+    TResult Function()? signOutSuccess,
+    required TResult orElse(),
+  }) {
+    if (signOutSuccess != null) {
+      return signOutSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loding value) loding,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_SignOutSuccess value) signOutSuccess,
+  }) {
+    return signOutSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loding value)? loding,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
+  }) {
+    return signOutSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loding value)? loding,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_SignOutSuccess value)? signOutSuccess,
+    required TResult orElse(),
+  }) {
+    if (signOutSuccess != null) {
+      return signOutSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SignOutSuccess implements VerifyEmailState {
+  const factory _SignOutSuccess() = _$_SignOutSuccess;
 }

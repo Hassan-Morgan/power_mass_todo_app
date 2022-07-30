@@ -33,14 +33,16 @@ import '../../features/auth_feature/domain/usecases/send_verification_email_usec
     as _i34;
 import '../../features/auth_feature/domain/usecases/sign_in_with_email_and_password_usecase.dart'
     as _i35;
-import '../../features/auth_feature/presentation/logic/auth_page_bloc/auth_bloc.dart'
-    as _i37;
-import '../../features/auth_feature/presentation/logic/get_current_user_cubit/get_current_user_cubit.dart'
-    as _i38;
-import '../../features/auth_feature/presentation/logic/reset_password_cubit/reset_password_cubit.dart'
-    as _i39;
-import '../../features/auth_feature/presentation/logic/verify_email_cubit/verify_email_cubit.dart'
+import '../../features/auth_feature/domain/usecases/sign_out_usecase.dart'
     as _i36;
+import '../../features/auth_feature/presentation/logic/auth_page_bloc/auth_bloc.dart'
+    as _i38;
+import '../../features/auth_feature/presentation/logic/get_current_user_cubit/get_current_user_cubit.dart'
+    as _i39;
+import '../../features/auth_feature/presentation/logic/reset_password_cubit/reset_password_cubit.dart'
+    as _i40;
+import '../../features/auth_feature/presentation/logic/verify_email_cubit/verify_email_cubit.dart'
+    as _i37;
 import '../../features/complete_user_info/data/data_source/local_data_source/pick_profile_image_local_data_source.dart'
     as _i10;
 import '../../features/complete_user_info/data/data_source/remote_data_source/firebase_remote_data_source.dart'
@@ -76,7 +78,7 @@ import '../../features/home_feature/domain/use_cases/start_task_usecase.dart'
 import '../../features/home_feature/presentation/logic/home_bloc/home_bloc.dart'
     as _i30;
 import '../services/network_info_service.dart' as _i9;
-import 'inject_modules.dart' as _i40; // ignore_for_file: unnecessary_lambdas
+import 'inject_modules.dart' as _i41; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -151,17 +153,19 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => _i34.SendVerificationEmailUsecase(get<_i26.AuthRepository>()));
   gh.lazySingleton<_i35.SignInWithEmailAndPasswordUsecase>(
       () => _i35.SignInWithEmailAndPasswordUsecase(get<_i26.AuthRepository>()));
-  gh.factory<_i36.VerifyEmailCubit>(
-      () => _i36.VerifyEmailCubit(get<_i34.SendVerificationEmailUsecase>()));
-  gh.factory<_i37.AuthBloc>(() => _i37.AuthBloc(
+  gh.lazySingleton<_i36.SignOutUsecase>(
+      () => _i36.SignOutUsecase(get<_i26.AuthRepository>()));
+  gh.factory<_i37.VerifyEmailCubit>(() => _i37.VerifyEmailCubit(
+      get<_i34.SendVerificationEmailUsecase>(), get<_i36.SignOutUsecase>()));
+  gh.factory<_i38.AuthBloc>(() => _i38.AuthBloc(
       get<_i31.RegisterWithEmailAndPasswordUsecase>(),
       get<_i32.RegisterWithGoogleUsecase>(),
       get<_i35.SignInWithEmailAndPasswordUsecase>()));
-  gh.factory<_i38.GetCurrentUserCubit>(
-      () => _i38.GetCurrentUserCubit(get<_i29.GetCurrentUserUsecase>()));
-  gh.factory<_i39.ResetPasswordCubit>(
-      () => _i39.ResetPasswordCubit(get<_i33.ResetPasswordUsecase>()));
+  gh.factory<_i39.GetCurrentUserCubit>(
+      () => _i39.GetCurrentUserCubit(get<_i29.GetCurrentUserUsecase>()));
+  gh.factory<_i40.ResetPasswordCubit>(
+      () => _i40.ResetPasswordCubit(get<_i33.ResetPasswordUsecase>()));
   return get;
 }
 
-class _$RegisterModule extends _i40.RegisterModule {}
+class _$RegisterModule extends _i41.RegisterModule {}

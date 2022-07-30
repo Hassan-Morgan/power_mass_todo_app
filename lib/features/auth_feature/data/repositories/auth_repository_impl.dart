@@ -88,6 +88,19 @@ class AuthRepositoryImpl extends AuthRepository {
     }
   }
 
+  @override
+  Future<Either<AuthFailures, Unit>> signOut() async {
+    if (await _networkInfo.getCurrentConnectionState) {
+      final result = await _remoteDataSource.signOut();
+      return result.fold(
+        (l) => Left(_toAuthFailure(l)),
+        (r) => const Right(unit),
+      );
+    } else {
+      return const Left(AuthFailures.networkFailure());
+    }
+  }
+
   Future<Either<AuthFailures, Unit>> _authFunction({
     required Future<Either<AuthExceptions, Unit>> authResult,
   }) async {

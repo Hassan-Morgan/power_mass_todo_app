@@ -63,10 +63,17 @@ Route appGeneratedRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) {
           final userEntity = settings.arguments as UserEntity;
-          return BlocProvider(
-            create: (context) => getIt<HomeBloc>()
-              ..add(HomeEvent.getTasks(userEntity))
-              ..add(HomeEvent.getUsers(userEntity.userId)),
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => getIt<HomeBloc>()
+                  ..add(HomeEvent.getTasks(userEntity))
+                  ..add(HomeEvent.getUsers(userEntity.userId)),
+              ),
+              BlocProvider(
+                create: (context) => getIt<VerifyEmailCubit>(),
+              ),
+            ],
             child: HomePage(
               currentUser: userEntity,
               isManager: manegerEmails.contains(userEntity.userEmail),
