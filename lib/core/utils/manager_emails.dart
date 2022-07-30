@@ -1,1 +1,1 @@
-const List<String> manegerEmails = ['huspogulti@vusra.com'];
+const List<String> manegerEmails = ['roratipe@teleg.eu'];
